@@ -1,8 +1,8 @@
 # Tenant,ID,Contexts,FilterIDs,ActivationInterval,AttributeFilterIDs,Path,Type,Value,Blocker,Weight
 
-# ATTR_CRG_SUPPLIER1 replaces Category->supplier1 and RequestType->*constant for *sessions and *cdrs events
-cgrates.org,ATTR_CRG_SUPPLIER1,*sessions;*cdrs,,,,*req.Category,*constant,supplier1,false,0
-cgrates.org,ATTR_CRG_SUPPLIER1,,,,,*req.RequestType,*constant,*rated,,
+# ATTR_DISTRIB1 replaces Category->distributor1 and RequestType->*constant for *chargers events
+cgrates.org,ATTR_DISTRIB1,*chargers,,,,*req.Category,*constant,distributor1,false,0
+cgrates.org,ATTR_DISTRIB1,,,,,*req.RequestType,*constant,*rated,,
 
 # ATTR_1001_AUTH returns the Password value for the account 1001 in context <auth>
 cgrates.org,ATTR_1001_AUTH,auth,*string:~*req.Account:1001,,,*req.Password,*constant,CGRateS.org,false,20
